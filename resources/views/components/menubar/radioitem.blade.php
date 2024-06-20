@@ -23,7 +23,7 @@
         class="absolute left-2 flex h-3.5 w-3.5 items-center justify-center"
         x-show="__foo('{{ $value }}')"
     >
-        <x-radix-dot-filled class="h-4 w-4" />
+        <x-lucide-dot class="h-4 w-4" />
     </span>
     {{ $slot }}
 </li>
