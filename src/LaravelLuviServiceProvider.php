@@ -22,6 +22,7 @@ class LaravelLuviServiceProvider extends ServiceProvider
         'hover-card',
         'input',
         'label',
+        'link',
         'menubar',
         'popover',
         'portal',
