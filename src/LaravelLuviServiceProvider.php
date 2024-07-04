@@ -32,6 +32,7 @@ class LaravelLuviServiceProvider extends ServiceProvider
         'switch',
         'tabs',
         'textarea',
+        'tooltip',
         'typography',
     ];
 
@@ -90,6 +91,10 @@ class LaravelLuviServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/../resources/js/plugins/searchable.js' => resource_path('js/plugins/searchable.js'),
         ], 'searchable');
+
+        $this->publishes([
+            __DIR__.'/../resources/js/plugins/tooltip.js' => resource_path('js/plugins/tooltip.js'),
+        ], 'tooltip');
 
         // tailwind / css
         $this->publishes([
