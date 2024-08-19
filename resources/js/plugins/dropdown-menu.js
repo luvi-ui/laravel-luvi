@@ -164,6 +164,9 @@ function handleItems(el, Alpine) {
             this.$data.__lastEl =
                 this.$data.__itemEls[this.$data.__itemEls.length - 1];
         },
+        "@click"() {
+            this.$data.__close();
+        },
         "@click.outside"() {
             this.$data.__close();
         },
