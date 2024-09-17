@@ -67,7 +67,7 @@ class LaravelLuviServiceProvider extends ServiceProvider
             ], $livewireComponent);
 
             $this->publishes([
-                __DIR__.'/../app/Livewire/UI/'.str($livewireComponent)->ucfirst().'.php' => app_path('Livewire/UI/'.str($livewireComponent)->ucfirst()).'.php',
+                __DIR__.'/../app/Livewire/Ui/'.str($livewireComponent)->ucfirst().'.php' => app_path('Livewire/Ui/'.str($livewireComponent)->ucfirst()).'.php',
             ], $livewireComponent);
         }
 
