@@ -38,6 +38,10 @@ class LaravelLuviServiceProvider extends ServiceProvider
         'typography',
     ];
 
+    protected $livewireComponents = [
+        'combobox',
+    ];
+
     /**
      * Register any application services.
      */
@@ -55,6 +59,16 @@ class LaravelLuviServiceProvider extends ServiceProvider
             $this->publishes([
                 __DIR__."/../resources/views/components/{$component}" => resource_path("views/components/{$component}"),
             ], $component);
+        }
+
+        foreach ($this->livewireComponents as $livewireComponent) {
+            $this->publishes([
+                __DIR__."/../resources/views/livewire/{$livewireComponent}" => resource_path("views/livewire/{$livewireComponent}"),
+            ], $livewireComponent);
+
+            $this->publishes([
+                __DIR__.'/../app/Livewire/UI/'.str($livewireComponent)->ucfirst().'.php' => app_path('Livewire/UI/'.str($livewireComponent)->ucfirst()).'.php',
+            ], $livewireComponent);
         }
 
         $this->publishes([
