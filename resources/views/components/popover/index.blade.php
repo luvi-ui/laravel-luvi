@@ -11,6 +11,7 @@
     x-id="['popover-trigger']"
     x-on:keydown.escape.window="__close($refs.trigger)"
     x-on:focusin.window="! $refs.popoverContent.contains($event.target) && __close()"
+    {{ $attributes }}
 >
     {{ $slot }}
 </div>
