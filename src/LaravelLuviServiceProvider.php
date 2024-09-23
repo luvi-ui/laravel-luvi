@@ -18,6 +18,7 @@ class LaravelLuviServiceProvider extends ServiceProvider
         'button',
         'card',
         'checkbox',
+        'dialog',
         'dropdown-menu',
         'form',
         'hover-card',
