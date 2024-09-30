@@ -10,7 +10,7 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
-        "feature-ninja/cva": "^0.2.0",
+        "feature-ninja/cva": "^0.3.0",
         "gehrisandro/tailwind-merge-laravel": "^1.2",
         "illuminate/contracts": "^10.0||^11.0",
         "spatie/laravel-package-tools": "^1.16"
