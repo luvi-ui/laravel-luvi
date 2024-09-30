@@ -73,19 +73,19 @@ class LaravelLuviServiceProvider extends ServiceProvider
         }
 
         $this->publishes([
-            __DIR__.'/../App/Services/ButtonCvaService.php' => app_path('Services/ButtonCvaService.php'),
+            __DIR__.'/../app/Services/ButtonCvaService.php' => app_path('Services/ButtonCvaService.php'),
         ], 'button');
 
         $this->publishes([
-            __DIR__.'/../App/Services/AlertCvaService.php' => app_path('Services/AlertCvaService.php'),
+            __DIR__.'/../app/Services/AlertCvaService.php' => app_path('Services/AlertCvaService.php'),
         ], 'alert');
 
         $this->publishes([
-            __DIR__.'/../App/Services/BadgeCvaService.php' => app_path('Services/BadgeCvaService.php'),
+            __DIR__.'/../app/Services/BadgeCvaService.php' => app_path('Services/BadgeCvaService.php'),
         ], 'badge');
 
         $this->publishes([
-            __DIR__.'/../App/Services/SheetCvaService.php' => app_path('Services/SheetCvaService.php'),
+            __DIR__.'/../app/Services/SheetCvaService.php' => app_path('Services/SheetCvaService.php'),
         ], 'sheet');
 
         // plugins
