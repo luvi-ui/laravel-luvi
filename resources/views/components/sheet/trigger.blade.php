@@ -1,3 +1,10 @@
-<div @click="open = ! open">
+@props([
+    'as' => 'fragment',
+])
+<x-dynamic-component
+    :component="$as"
+    :$attributes
+    x-on:click="open = ! open"
+>
     {{ $slot }}
-</div>
+</x-dynamic-component>
