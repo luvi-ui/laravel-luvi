@@ -34,6 +34,7 @@ class LaravelLuviServiceProvider extends ServiceProvider
         'sheet',
         'switch',
         'tabs',
+        'toast',
         'textarea',
         'tooltip',
         'typography',
