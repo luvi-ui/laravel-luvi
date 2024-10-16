@@ -1,4 +1,5 @@
 <dialog
+    wire:ignore.self
     x-effect="dialogOpen ? $el.showModal() : $el.close()"
     x-on:close.stop="dialogOpen = false"
     x-on:cancel.stop="dialogOpen = false"
