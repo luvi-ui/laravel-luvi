@@ -1,3 +1,10 @@
-<x-button x-dropdown-menu:button {{ $attributes }}>
+@props([
+    'as' => 'fragment',
+])
+<x-dynamic-component
+    :component="$as"
+    :$attributes
+    x-dropdown-menu:button
+>
     {{ $slot }}
-</x-button>
+</x-dynamic-component>

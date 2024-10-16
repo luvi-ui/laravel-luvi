@@ -1,10 +1,14 @@
-<div
-    :id="$id('popover-trigger')"
+@props([
+    'as' => 'fragment',
+])
+<x-dynamic-component
+    :component="$as"
+    :attributes="$attributes->twMerge('inline-flex')"
+    ::id="$id('popover-trigger')"
     x-ref="popover-trigger"
     x-on:click="__open = !__open"
-    :aria-expanded="__open"
-    :aria-controls="$id('popover-trigger')"
-    {{ $attributes->twMerge('inline-flex')}}
+    ::aria-expanded="__open"
+    ::aria-controls="$id('popover-trigger')"
 >
     {{ $slot }}
-</div>
+</x-dynamic-component>

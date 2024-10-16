@@ -1,10 +1,10 @@
 @props([
-    'variant' => 'outline',
+    'as' => 'fragment',
 ])
-
-<x-button
-    :$variant
-    @click="$refs.__dialog.showModal();"
+<x-dynamic-component
+    :component="$as"
+    :$attributes
+    x-on:click="$refs.__dialog.showModal();"
 >
     {{ $slot }}
-</x-button>
+</x-dynamic-component>
