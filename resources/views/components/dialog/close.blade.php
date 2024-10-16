@@ -4,7 +4,7 @@
 
 <x-button
     :$variant
-    @click="$refs.__dialog.close()"
+    @click="dialogOpen = false"
 >
     Close
 </x-button>
