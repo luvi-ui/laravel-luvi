@@ -21,6 +21,7 @@ class LaravelLuviServiceProvider extends ServiceProvider
         'dialog',
         'dropdown-menu',
         'form',
+        'fragment',
         'hover-card',
         'input',
         'label',
