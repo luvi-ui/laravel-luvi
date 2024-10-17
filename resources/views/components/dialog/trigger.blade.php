@@ -4,7 +4,7 @@
 
 <x-button
     :$variant
-    @click="$refs.__dialog.showModal();"
+    @click="dialogOpen = true"
 >
     {{ $slot }}
 </x-button>
