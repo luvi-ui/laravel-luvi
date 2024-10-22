@@ -1,7 +1,7 @@
 @props([
     'type' => 'text',
-    'label' => 'label',
-    'description-trailing' => '',
+    'label' => 'Label',
+    'descriptionTrailing' => '',
 ])
 
 <x-form.item>
