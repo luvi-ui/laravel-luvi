@@ -15,6 +15,7 @@ class LaravelLuviServiceProvider extends ServiceProvider
         'alert',
         'avatar',
         'badge',
+        'breadcrumb',
         'button',
         'card',
         'checkbox',
