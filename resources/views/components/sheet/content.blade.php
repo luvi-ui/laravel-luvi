@@ -2,7 +2,7 @@
     'side' => 'right',
 ])
 
-@inject('sheet', 'App\Services\SheetCvaService')
+@inject('sheet', 'App\Services\DialogCvaService')
 
 <dialog
     x-ref="__sheet"

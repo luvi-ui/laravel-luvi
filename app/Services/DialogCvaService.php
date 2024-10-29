@@ -4,7 +4,7 @@ namespace App\Services;
 
 use FeatureNinja\Cva\ClassVarianceAuthority;
 
-class SheetCvaService
+class DialogCvaService
 {
     public static function new(): ClassVarianceAuthority
     {
