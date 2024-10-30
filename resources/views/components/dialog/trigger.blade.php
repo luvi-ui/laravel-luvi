@@ -4,7 +4,7 @@
 
 <x-button
     :$variant
-    @click="dialogOpen = true"
+    x-on:click="__dialogOpen = true"
 >
     {{ $slot }}
 </x-button>

@@ -87,6 +87,10 @@ class LaravelLuviServiceProvider extends ServiceProvider
 
         $this->publishes([
             __DIR__.'/../app/Services/DialogCvaService.php' => app_path('Services/DialogCvaService.php'),
+        ], 'dialog');
+
+        $this->publishes([
+            __DIR__.'/../app/Services/DialogCvaService.php' => app_path('Services/DialogCvaService.php'),
         ], 'sheet');
 
         // plugins
