@@ -1,6 +1,6 @@
 <div
-    x-data="{ dialogOpen: false }"
-    x-modelable="dialogOpen"
+    x-data="{ __dialogOpen: false }"
+    x-modelable="__dialogOpen"
     {{ $attributes->twMerge('') }}
 >
     {{ $slot }}

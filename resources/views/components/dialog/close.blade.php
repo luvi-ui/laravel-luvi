@@ -4,7 +4,11 @@
 
 <x-button
     :$variant
-    @click="dialogOpen = false"
+    x-on:click="__dialogOpen = false"
 >
-    Close
+    @if ($slot->isEmpty())
+        {{ __('Close') }}
+    @else
+        {{ $slot }}
+    @endif
 </x-button>
