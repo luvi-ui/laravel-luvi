@@ -1,5 +1,5 @@
 <x-button
-    @click="open = false"
+    x-on:click="__sheetOpen = false"
     {{ $attributes->twMerge('') }}
 >
     {{ $slot }}

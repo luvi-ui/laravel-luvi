@@ -5,7 +5,7 @@ namespace LuviUI\LaravelLuvi;
 use App\Services\AlertCvaService;
 use App\Services\BadgeCvaService;
 use App\Services\ButtonCvaService;
-use App\Services\SheetCvaService;
+use App\Services\DialogCvaService;
 use Illuminate\Support\ServiceProvider;
 
 class LaravelLuviServiceProvider extends ServiceProvider
@@ -52,7 +52,7 @@ class LaravelLuviServiceProvider extends ServiceProvider
         $this->app->singleton(AlertCvaService::class, fn () => AlertCvaService::new());
         $this->app->singleton(BadgeCvaService::class, fn () => BadgeCvaService::new());
         $this->app->singleton(ButtonCvaService::class, fn () => ButtonCvaService::new());
-        $this->app->singleton(SheetCvaService::class, fn () => SheetCvaService::new());
+        $this->app->singleton(DialogCvaService::class, fn () => DialogCvaService::new());
     }
 
     public function boot(): void
@@ -86,7 +86,7 @@ class LaravelLuviServiceProvider extends ServiceProvider
         ], 'badge');
 
         $this->publishes([
-            __DIR__.'/../app/Services/SheetCvaService.php' => app_path('Services/SheetCvaService.php'),
+            __DIR__.'/../app/Services/DialogCvaService.php' => app_path('Services/DialogCvaService.php'),
         ], 'sheet');
 
         // plugins
