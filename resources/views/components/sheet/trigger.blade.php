@@ -1,3 +1,3 @@
-<div x-on:click="sheetOpen = true; $refs.__sheet.showModal()">
+<div x-on:click="__sheetOpen = true">
     {{ $slot }}
 </div>

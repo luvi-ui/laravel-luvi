@@ -1,6 +1,6 @@
 <div
-    x-data="{ sheetOpen: false }"
-    x-on:keydown.escape.window="sheetOpen = false"
+    x-data="{ __sheetOpen: false }"
+    x-modelable="__sheetOpen"
 >
     {{ $slot }}
 </div>
