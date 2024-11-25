@@ -66,4 +66,7 @@
         font-synthesis-weight: none;
         text-rendering: optimizeLegibility;
     }
+    [type="checkbox"]:indeterminate {
+        @apply bg-primary;
+    }
 }
