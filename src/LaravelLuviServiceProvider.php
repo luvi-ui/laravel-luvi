@@ -33,6 +33,7 @@ class LaravelLuviServiceProvider extends ServiceProvider
         'select',
         'separator',
         'sheet',
+        'sidebar',
         'switch',
         'tabs',
         'textarea',
@@ -117,6 +118,10 @@ class LaravelLuviServiceProvider extends ServiceProvider
 
         $this->publishes([
             __DIR__.'/../resources/js/plugins/searchable.js' => resource_path('js/plugins/searchable.js'),
+        ], 'searchable');
+        
+        $this->publishes([
+            __DIR__.'/../resources/js/plugins/sidebar.js' => resource_path('js/plugins/sidebar.js'),
         ], 'searchable');
 
         $this->publishes([
