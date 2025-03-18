@@ -4,8 +4,6 @@
 $positionClasses = [
 'bottom-left' => 'bottom-5 left-5',
 'bottom-right' => 'bottom-5 right-5',
-'top-left' => 'top-5 left-5',
-'top-right' => 'top-5 right-5',
 ];
 @endphp
 
