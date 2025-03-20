@@ -126,7 +126,9 @@ class LaravelLuviServiceProvider extends ServiceProvider
 
         $this->publishes([
             __DIR__ . '/../resources/js/plugins/toast.js' => resource_path('js/plugins/toast.js'),
+            __DIR__ . '/../resources/js/plugins/toast-attribute.js' => resource_path('js/plugins/toast-attribute.js'),
         ], 'toast');
+
 
         // tailwind / css
         $this->publishes([
