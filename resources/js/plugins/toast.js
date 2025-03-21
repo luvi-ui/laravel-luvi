@@ -7,13 +7,7 @@ export default function (Alpine) {
         activeTimers: {},
 
         init() {
-            window.showToast = (
-                message,
-                type = "default",
-                theme = "light",
-                duration = null,
-                action = null
-            ) => {
+            window.showToast = (message, duration = null, action = null) => {
                 if (
                     !message ||
                     typeof message !== "string" ||
@@ -23,13 +17,7 @@ export default function (Alpine) {
                     return;
                 }
 
-                Alpine.store("toasts").createToast(
-                    message,
-                    type,
-                    theme,
-                    duration,
-                    action
-                );
+                Alpine.store("toasts").createToast(message, duration, action);
             };
         },
 
@@ -43,20 +31,12 @@ export default function (Alpine) {
             const nextToast = this.toastQueue.shift();
             this.addToastToDisplay(
                 nextToast.message,
-                nextToast.type,
-                nextToast.theme,
                 nextToast.duration,
                 nextToast.action
             );
         },
 
-        createToast(
-            message,
-            type = "default",
-            theme = "light",
-            duration = null,
-            action = null
-        ) {
+        createToast(message, duration = null, action = null) {
             if (
                 !message ||
                 typeof message !== "string" ||
@@ -69,23 +49,15 @@ export default function (Alpine) {
             if (this.items.length >= this.maxToasts) {
                 this.toastQueue.push({
                     message,
-                    type,
-                    theme,
                     duration,
                     action,
                 });
             } else {
-                this.addToastToDisplay(message, type, theme, duration, action);
+                this.addToastToDisplay(message, duration, action);
             }
         },
 
-        addToastToDisplay(
-            message,
-            type = "default",
-            theme = "light",
-            duration = null,
-            action = null
-        ) {
+        addToastToDisplay(message, duration = null, action = null) {
             const id = Date.now() + Math.floor(Math.random() * 1000);
             const actualDuration =
                 duration !== null ? duration : this.defaultDuration;
@@ -110,8 +82,6 @@ export default function (Alpine) {
             const toast = {
                 id,
                 message,
-                type,
-                theme,
                 duration: actualDuration,
                 show: false,
                 actionLabel,
