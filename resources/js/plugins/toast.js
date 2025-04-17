@@ -163,4 +163,10 @@ export default function (Alpine) {
             }, 300);
         },
     });
+
+    document.addEventListener("livewire:initialized", () => {
+        Livewire.on("toast", (data) => {
+            window.showToast(data.message, data.duration, data.action);
+        });
+    });
 }

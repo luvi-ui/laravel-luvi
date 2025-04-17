@@ -3,6 +3,8 @@ export default function (Alpine) {
         document
             .querySelectorAll("[toast-message], [data-toast-message]")
             .forEach((el) => {
+                if (el.__toastBound) return;
+                el.__toastBound = true;
                 el.addEventListener("click", (e) => {
                     const getMessage = (attr) =>
                         el.getAttribute(`toast-${attr}`) ||
