@@ -6,6 +6,7 @@ use App\Services\AlertCvaService;
 use App\Services\BadgeCvaService;
 use App\Services\ButtonCvaService;
 use App\Services\DialogCvaService;
+use App\Services\ToastService;
 use Illuminate\Support\ServiceProvider;
 
 class LaravelLuviServiceProvider extends ServiceProvider
@@ -54,6 +55,7 @@ class LaravelLuviServiceProvider extends ServiceProvider
         $this->app->singleton(BadgeCvaService::class, fn() => BadgeCvaService::new());
         $this->app->singleton(ButtonCvaService::class, fn() => ButtonCvaService::new());
         $this->app->singleton(DialogCvaService::class, fn() => DialogCvaService::new());
+
     }
 
     public function boot(): void
@@ -93,6 +95,10 @@ class LaravelLuviServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__ . '/../app/Services/DialogCvaService.php' => app_path('Services/DialogCvaService.php'),
         ], 'sheet');
+
+        $this->publishes([
+            __DIR__ . '/../app/Services/ToastService.php' => app_path('Services/ToastService.php'),
+        ], 'toast');
 
         // plugins
         $this->publishes([

@@ -166,7 +166,16 @@ export default function (Alpine) {
 
     document.addEventListener("livewire:initialized", () => {
         Livewire.on("toast", (data) => {
-            window.showToast(data.message, data.duration, data.action);
+            let toastAction = data.action;
+
+            if (data.action && data.action_url) {
+                toastAction = {
+                    label: data.action,
+                    callback: () => (window.location.href = data.action_url),
+                };
+            }
+
+            window.showToast(data.message, data.duration, toastAction);
         });
     });
 }
